@@ -1247,19 +1247,45 @@
     .contact-social {
       display: flex;
       justify-content: center;
-      gap: 26px;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .contact-social a {
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 15px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 600;
+      padding: 10px 22px;
+      border: 1px solid var(--line);
+      border-radius: 40px;
+      background: rgba(23, 23, 23, 0.6);
+      transition: all 0.25s ease;
+    }
+
+    .contact-social a svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      transition: transform 0.25s ease;
     }
 
     .contact-social a:hover {
-      color: var(--neon);
+      color: #0a0a0a;
+      background: var(--neon);
+      border-color: var(--neon);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(226, 255, 61, 0.25);
+    }
+
+    .contact-social a:hover svg {
+      transform: scale(1.1);
     }
 
     /* ============ FOOTER ============ */
@@ -1772,9 +1798,18 @@
         <h2 class="reveal">Got a project in mind? <span>Let's build it.</span></h2>
         <a href="mailto:chamikadinisuru2@gmail.com" class="contact-email reveal">chamikadinisuru2@gmail.com</a>
         <div class="contact-social reveal">
-          <a href="https://wa.me/94774532864" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/chamika-d-adhikari-baa74037b" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/chamikadinisuru" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://wa.me/94774532864" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.197 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.553 4.11 1.519 5.842L0 24l6.328-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.606-.484-5.137-1.332l-.368-.206-3.754.877.893-3.666-.231-.382A9.948 9.948 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://www.linkedin.com/in/chamika-d-adhikari-baa74037b" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/chamikadinisuru" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
       <!-- ============ PROJECT DETAILS MODAL ============ -->
