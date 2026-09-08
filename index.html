@@ -1858,6 +1858,10 @@
             <p class="project-modal-label">Tech Stack:</p>
             <div class="project-modal-tags" id="modalTagsContainer"></div>
           </div>
+
+          <div class="project-modal-section" id="modalLinkSection" style="display: none; padding-top: 24px; border-top: none;">
+            <a href="#" target="_blank" rel="noopener" id="modalLinkBtn" class="btn-solid" style="padding: 12px 24px;">Visit Website ↗</a>
+          </div>
         </div>
       </div>
 
@@ -1929,7 +1933,8 @@
         title: "OSA PHOTOGRAPHY – Portfolio & Client Management System",
         description: "Custom photography portfolio website with dynamic gallery management, client inquiry system, and automated contact forms. Built for a Sri Lankan photographer to showcase work and manage client requests efficiently.",
         features: "Dynamic Gallery, Client Inquiry Form, Admin Dashboard, Image Upload, Contact Management, Responsive Design",
-        techStack: ["PHP", "JavaScript", "CSS", "MySQL", "Bootstrap", "Git"]
+        techStack: ["PHP", "JavaScript", "CSS", "MySQL", "Bootstrap", "Git"],
+        link: "http://osaphotography.great-site.net/"
       },
       5: {
         title: "Smoke & Fire Detection System – IoT Safety Device",
@@ -1963,6 +1968,8 @@
     const modalDesc = document.getElementById('modalDesc');
     const modalFeaturesText = document.getElementById('modalFeaturesText');
     const modalTagsContainer = document.getElementById('modalTagsContainer');
+    const modalLinkSection = document.getElementById('modalLinkSection');
+    const modalLinkBtn = document.getElementById('modalLinkBtn');
 
     function openProjectModal(projectId) {
       const data = projectsData[projectId];
@@ -1972,6 +1979,13 @@
       modalDesc.textContent = data.description;
       modalFeaturesText.textContent = data.features;
       modalTagsContainer.innerHTML = data.techStack.map(t => `<span class="project-modal-tag">${t}</span>`).join('');
+
+      if (data.link) {
+        modalLinkBtn.href = data.link;
+        modalLinkSection.style.display = 'block';
+      } else {
+        modalLinkSection.style.display = 'none';
+      }
 
       modalOverlay.classList.add('active');
       document.body.style.overflow = 'hidden';
