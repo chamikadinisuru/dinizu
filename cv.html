@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamika D Adhikari - CV</title>
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #e6e9ef;
+            --text-main: #333;
+            --text-muted: #555;
+            --bg-light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #525659;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .cv-container {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            display: flex;
+        }
+
+        /* Left Column */
+        .left-col {
+            width: 35%;
+            background-color: var(--secondary);
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            background-color: #ccc;
+            border-radius: 5px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+
+        .section-title-left {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+        }
+        
+        .contact-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 3px;
+        }
+        
+        .contact-value {
+            font-size: 13px;
+            color: var(--text-muted);
+            word-break: break-all;
+        }
+
+        .skills-list {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 13px;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Right Column */
+        .right-col {
+            width: 65%;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .header-name {
+            font-size: 32px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header-title {
+            background-color: var(--secondary);
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-title-right {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .content-block {
+            margin-bottom: 20px;
+        }
+
+        .content-text {
+            font-size: 13.5px;
+            color: var(--text-main);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 14px;
+            background-color: #eee;
+            padding: 4px 8px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .item-subtitle {
+            font-size: 13.5px;
+            color: var(--text-main);
+            margin-bottom: 3px;
+        }
+        
+        .item-date {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--text-main);
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+
+        .project-tech {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .bullet-list {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 13.5px;
+            line-height: 1.6;
+        }
+        
+        .declaration {
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
+            <div class="profile-pic">
+                [Insert Your Photo Here<br>150x150]
+            </div>
+
+            <div>
+                <div class="section-title-left">Contact Details</div>
+                
+                <div class="contact-item">
+                    <div class="contact-label">Contact Number</div>
+                    <div class="contact-value">+94 77 453 2864</div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">chamikadinisuru2@gmail.com</div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-label">Address</div>
+                    <div class="contact-value">[Your Address, Sri Lanka]</div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value"><a href="https://www.linkedin.com/in/chamika-d-adhikari-baa74037b" style="color: var(--text-muted); text-decoration: none;">Chamika D Adhikari</a></div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value"><a href="https://github.com/chamikadinisuru" style="color: var(--text-muted); text-decoration: none;">chamikadinisuru</a></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title-left">Technical Skills</div>
+                <ul class="skills-list">
+                    <li><b>Mobile & Web Development:</b> Flutter, Dart, JavaScript (ES6+), HTML5, CSS3, Bootstrap</li>
+                    <li><b>Backend & APIs:</b> PHP, CodeIgniter, RESTful APIs, Node.js</li>
+                    <li><b>Cloud & Services:</b> Firebase (Auth, Firestore, FCM), AWS</li>
+                    <li><b>Databases:</b> MySQL</li>
+                    <li><b>Hardware & IoT:</b> MQ Gas & Smoke Sensors, GSM Alert Modules</li>
+                    <li><b>Tools & Version Control:</b> Git, GitHub, Postman</li>
+                </ul>
+            </div>
+            
+            <div>
+                <div class="section-title-left">Personal Details</div>
+                <ul class="skills-list" style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 5px;"><b>Date of Birth:</b> [DD Month YYYY]</li>
+                    <li style="margin-bottom: 5px;"><b>Nationality:</b> Sri Lankan</li>
+                    <li style="margin-bottom: 5px;"><b>Gender:</b> Male</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-col">
+            <div>
+                <div class="header-name">Chamika D Adhikari</div>
+                <div class="header-title">Full Stack Developer | Mobile & Web Solutions</div>
+            </div>
+
+            <div>
+                <div class="section-title-right">Professional Summary</div>
+                <div class="content-text">
+                    Versatile Full Stack Developer with a strong foundation in modern web and mobile application development. 
+                    Experienced in building scalable solutions using Flutter, PHP, and JavaScript, with hands-on expertise in backend architecture, RESTful APIs, and cloud services like Firebase and AWS. 
+                    Adept at solving complex problems, streamlining workflows, and delivering user-centric digital platforms such as workplace management systems and booking engines. 
+                    Passionate about continuous learning and delivering robust, high-performance applications from concept to deployment.
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title-right">Educational Qualifications</div>
+                
+                <div class="content-block">
+                    <div class="item-title">[Your Degree / Diploma Name e.g., HNDIT or BSc]</div>
+                    <div class="item-subtitle">[Institution Name], Sri Lanka</div>
+                    <div class="item-date">[Year Started] - [Year Ended] | [Status e.g., Successfully Completed]</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title-right">Secondary Education</div>
+                
+                <div class="content-block">
+                    <div class="item-title">General Certificate of Education - Advanced Level Examination</div>
+                    <div class="item-subtitle">[Your School Name], [Location], Sri Lanka</div>
+                    <div class="item-date">[Year] | Successfully Completed</div>
+                    <ul class="bullet-list">
+                        <li>Stream: [e.g., Physical Science / ICT]</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <div class="item-title">General Certificate of Education - Ordinary Level Examination</div>
+                    <div class="item-subtitle">[Your School Name], [Location], Sri Lanka</div>
+                    <div class="item-date">[Year] | Successfully Completed</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title-right">Project Experience</div>
+
+                <div class="project-item">
+                    <div class="project-title">Staff Sync – Workplace Platform</div>
+                    <div class="project-desc">
+                        Unified internal communication, digital attendance, and emergency safety system built for a Sri Lankan trading company. Replaced fragmented workflows with a real-time cross-platform solution including 1-1 & Group Chat, QR-based Attendance, and Emergency SOS with Live Location.
+                    </div>
+                    <div class="project-tech">Technology Stack: Flutter, Dart, Firebase (Auth, Firestore, Storage, FCM), Git</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">MedQueue – Medical Queue & Appointment System</div>
+                    <div class="project-desc">
+                        A digital queue management and appointment scheduling platform designed for clinics and patients. Streamlines clinic workflows by providing dedicated interfaces for administrators, doctors, and patients.
+                    </div>
+                    <div class="project-tech">Technology Stack: PHP (CodeIgniter), MySQL, JavaScript, CSS</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Royal Estate – Hotel & Events Booking Platform</div>
+                    <div class="project-desc">
+                        A full-stack booking platform for a luxury hotel featuring room and event hall reservations with real-time availability and secure online payments. Includes an admin panel for managing bookings, inventory, and revenue reports.
+                    </div>
+                    <div class="project-tech">Technology Stack: PHP, MySQL, JavaScript, Stripe API, HTML/CSS | <a href="https://royalestate.wuaze.com/" target="_blank" style="color: #888; text-decoration: underline;">View Website</a></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title-right">Core IT Competencies</div>
+                <ul class="bullet-list">
+                    <li>Full-Stack Web & Mobile Application Development</li>
+                    <li>Frontend & Backend Architecture</li>
+                    <li>REST API Development & Integration</li>
+                    <li>Database Management (SQL/NoSQL)</li>
+                    <li>Cloud Deployment & Version Control</li>
+                </ul>
+            </div>
+            
+            <div>
+                <div class="section-title-right">References</div>
+                <div style="display: flex; gap: 40px;">
+                    <div>
+                        <strong>[Reference 1 Name]</strong><br>
+                        <span style="font-size: 13px; color: var(--text-muted);">
+                            [Designation]<br>
+                            [Company/Institute]<br>
+                            Contact: [Phone]<br>
+                            Email: [Email]
+                        </span>
+                    </div>
+                    <div>
+                        <strong>[Reference 2 Name]</strong><br>
+                        <span style="font-size: 13px; color: var(--text-muted);">
+                            [Designation]<br>
+                            [Company/Institute]<br>
+                            Contact: [Phone]<br>
+                            Email: [Email]
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="declaration">
+                I do hereby declare that all the information and facts furnished above are true, correct and complete to the best of my belief and knowledge.
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
