@@ -1859,8 +1859,9 @@
             <div class="project-modal-tags" id="modalTagsContainer"></div>
           </div>
 
-          <div class="project-modal-section" id="modalLinkSection" style="display: none; padding-top: 24px; border-top: none;">
+          <div class="project-modal-section" id="modalLinkSection" style="display: none; padding-top: 24px; border-top: none; gap: 16px; flex-wrap: wrap;">
             <a href="#" target="_blank" rel="noopener" id="modalLinkBtn" class="btn-solid" style="padding: 12px 24px;">Visit Website ↗</a>
+            <a href="#" target="_blank" rel="noopener" id="modalDesignLinkBtn" class="btn-solid" style="padding: 12px 24px; display: none;">UIUX design ↗</a>
           </div>
         </div>
       </div>
@@ -1915,7 +1916,8 @@
         title: "Staff Sync – Workplace Platform",
         description: "Unified internal communication, digital attendance, and emergency safety system built for a Sri Lankan trading company. Replaced fragmented Gmail/phone-based workflows with a real-time cross-platform solution.",
         features: "1-1 & Group Chat, QR-based Attendance, Leave Management, View Receipts, Emergency SOS with Live Location.",
-        techStack: ["Flutter", "Dart", "Firebase (Auth, Firestore, Storage, FCM)", "Git"]
+        techStack: ["Flutter", "Dart", "Firebase (Auth, Firestore, Storage, FCM)", "Git"],
+        designLink: "https://www.figma.com/design/nwqiuFS5DRI5myOebu2yxu/Untitled?node-id=0-1&m=dev&t=djuvo6ckWz4tGAhR-1"
       },
       2: {
         title: "MedQueue – Medical Queue & Appointment System",
@@ -1928,14 +1930,16 @@
         description: "A full-stack booking platform for a luxury hotel, where guests can reserve rooms, event halls, and curated packages with real-time availability and secure online payments. Includes a complete admin panel for managing bookings, inventory, and revenue reports.",
         features: "User Registration/Login, Room & Event Hall Booking, Package Booking, Real-Time Availability Search, Stripe Payment Integration, Reviews & Ratings, Admin Dashboard, PDF/Excel Report Export",
         techStack: ["PHP", "MySQL", "JavaScript", "Stripe API", "HTML/CSS"],
-        link: "https://royalestate.wuaze.com/"
+        link: "https://royalestate.wuaze.com/",
+        designLink: "https://www.figma.com/board/cYXpKwKAkzEg9SyvdJXn6V/OSA-PHOTOGRAPHY?node-id=0-1&t=NxnWMIEJv6mhiqkU-1"
       },
       4: {
         title: "OSA PHOTOGRAPHY – Portfolio & Client Management System",
         description: "Custom photography portfolio website with dynamic gallery management, client inquiry system, and automated contact forms. Built for a Sri Lankan photographer to showcase work and manage client requests efficiently.",
         features: "Dynamic Gallery, Client Inquiry Form, Admin Dashboard, Image Upload, Contact Management, Responsive Design",
         techStack: ["PHP", "JavaScript", "CSS", "MySQL", "Bootstrap", "Git"],
-        link: "http://osaphotography.great-site.net/"
+        link: "http://osaphotography.great-site.net/",
+        designLink: "https://www.figma.com/board/cYXpKwKAkzEg9SyvdJXn6V/OSA-PHOTOGRAPHY?node-id=0-1&t=NxnWMIEJv6mhiqkU-1"
       },
       5: {
         title: "Smoke & Fire Detection System – IoT Safety Device",
@@ -1971,6 +1975,7 @@
     const modalTagsContainer = document.getElementById('modalTagsContainer');
     const modalLinkSection = document.getElementById('modalLinkSection');
     const modalLinkBtn = document.getElementById('modalLinkBtn');
+    const modalDesignLinkBtn = document.getElementById('modalDesignLinkBtn');
 
     function openProjectModal(projectId) {
       const data = projectsData[projectId];
@@ -1981,9 +1986,22 @@
       modalFeaturesText.textContent = data.features;
       modalTagsContainer.innerHTML = data.techStack.map(t => `<span class="project-modal-tag">${t}</span>`).join('');
 
-      if (data.link) {
-        modalLinkBtn.href = data.link;
-        modalLinkSection.style.display = 'block';
+      if (data.link || data.designLink) {
+        if (data.link) {
+          modalLinkBtn.href = data.link;
+          modalLinkBtn.style.display = 'inline-block';
+        } else {
+          modalLinkBtn.style.display = 'none';
+        }
+
+        if (data.designLink) {
+          modalDesignLinkBtn.href = data.designLink;
+          modalDesignLinkBtn.style.display = 'inline-block';
+        } else {
+          modalDesignLinkBtn.style.display = 'none';
+        }
+
+        modalLinkSection.style.display = 'flex';
       } else {
         modalLinkSection.style.display = 'none';
       }
